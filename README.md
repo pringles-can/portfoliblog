@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Portfolio
 
-## Getting Started
+Senior .NET Engineer portfolio focused on distributed systems, enterprise automation, and agentic AI engineering.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Layer | Technology |
+|-------|------------|
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| Language | TypeScript (strict) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com) |
+| Testing | [Vitest](https://vitest.dev) + [React Testing Library](https://testing-library.com) |
+| Linting | ESLint (eslint-config-next) |
+
+## Architecture
+
+The project uses **vertical slice architecture**: code is organized by feature, not by technical layer. Each feature owns its components, types, content data, and tests.
+
+```
+src/
+  app/                   # Next.js App Router root (layout, page, globals)
+  features/
+    hero/                # Hero section + diagram + tests
+    projects/            # Project cards, types, content, tests
+    writeups/            # Writeup cards, types, content, tests
+    skills/              # Skills grid, content, tests
+    resume/              # Resume section + tests
+    contact/             # Contact section + tests
+  shared/
+    ui/                  # Button, Card, Section — only truly reusable components
+    lib/                 # cn() utility
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Content is fully separated from presentation. Each feature's `*.content.ts` file holds all copy and data; components only render what they are given.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+## Testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Run all tests once
+npm test
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Watch mode
+npm run test:watch
 
-## Deploy on Vercel
+# Coverage report
+npm run test:coverage
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Type Checking & Linting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# TypeScript strict check
+npm run type-check
+
+# ESLint
+npm run lint
+```
+
+## Deploying to Vercel
+
+1. Push the repository to GitHub.
+2. Import the repository at [vercel.com/new](https://vercel.com/new).
+3. Vercel auto-detects Next.js — no configuration required.
+4. Set environment variables if needed (none required for this project by default).
+
+## Personalisation Checklist
+
+All `// TODO:` comments mark placeholders to replace before going live:
+
+- [ ] Your name in `layout.tsx`, `page.tsx`
+- [ ] Your domain in `layout.tsx` (Open Graph URL)
+- [ ] GitHub URL in `hero.content.ts` and `contact/ContactSection.tsx`
+- [ ] Email, LinkedIn, GitHub in `contact/ContactSection.tsx`
+- [ ] Company names and experience in `resume/ResumeSection.tsx`
+- [ ] Article URLs in `writeups/writeups.content.ts`
+- [ ] Project GitHub URLs in `projects/projects.content.ts`
+- [ ] Add `public/resume.pdf`
+- [ ] Add `public/og-image.png` (1200×630 recommended)
