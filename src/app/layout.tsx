@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "C#",
     "workflow automation",
   ],
-  authors: [{ name: "Your Name" }], // TODO: replace with your name
+  authors: [{ name: "Steven Prindle" }],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Senior .NET Engineer | Distributed Systems & Agentic AI",
     description:
-      "Senior Software Engineer specializing in .NET backend systems, distributed architecture, enterprise automation, and production agentic AI engineering.",
+      "Senior Software Engineer specializing in .NET (Core and Framework) backend systems, distributed architecture, enterprise automation, and production agentic AI engineering.",
   },
   robots: {
     index: true,

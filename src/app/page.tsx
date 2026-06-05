@@ -9,7 +9,7 @@ import { ContactSection } from "@/features/contact/ContactSection";
 export const metadata: Metadata = {
   title: "Senior .NET Engineer | Distributed Systems & Agentic AI",
   description:
-    "Portfolio of a Senior .NET Engineer specializing in distributed systems, enterprise automation, and production agentic AI.",
+    "Portfolio, projects, deployments, and ramblings of a Senior .NET Engineer specializing in distributed systems, enterprise automation, and production agentic AI.",
 };
 
 export default function Home() {
@@ -40,7 +40,7 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <span className="font-mono text-sm font-semibold text-indigo-400">
-          &lt;YourName /&gt; {/* TODO: replace with your name */}
+          &lt;Steven Prindle /&gt; { }
         </span>
         <div className="flex items-center gap-1">
           {[
