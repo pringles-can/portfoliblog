@@ -4,22 +4,22 @@ import { ButtonLink } from "@/shared/ui/Button";
 const contactLinks = [
   {
     label: "Email",
-    value: "you@example.com", // TODO: replace with your email
-    href: "mailto:you@example.com", // TODO: replace with your email
-    description: "Best for project enquiries and consulting.",
+    value: "[EMAIL_ADDRESS]", // TODO: replace with consts
+    href: "mailto:steprindle@hotmail.com", // TODO: replace with consts
+    description: "Best for individual contract or consulting requests.",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/yourhandle", // TODO: replace with your LinkedIn URL
-    href: "https://linkedin.com/in/yourhandle", // TODO: replace with your LinkedIn URL
+    value: "linkedin.com/in/steve-prindle", // TODO: replace with consts
+    href: "https://linkedin.com/in/steve-prindle-381137b5", // TODO: replace with consts
     description: "Professional history and recommendations.",
     external: true,
   },
   {
     label: "GitHub",
-    value: "github.com/yourhandle", // TODO: replace with your GitHub URL
-    href: "https://github.com/yourhandle", // TODO: replace with your GitHub URL
-    description: "Open-source work and side projects.",
+    value: "github.com/pringles-can", // TODO: replace with consts
+    href: "https://github.com/pringles-can", // TODO: replace with consts
+    description: "Side projects, forgotten experiments, and my open source contributions.",
     external: true,
   },
 ];

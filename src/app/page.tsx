@@ -5,6 +5,7 @@ import { WriteupsSection } from "@/features/writeups/WriteupsSection";
 import { SkillsSection } from "@/features/skills/SkillsSection";
 import { ResumeSection } from "@/features/resume/ResumeSection";
 import { ContactSection } from "@/features/contact/ContactSection";
+import { AskSection } from "@/features/ask/AskSection";
 
 export const metadata: Metadata = {
   title: "Senior .NET Engineer | Distributed Systems & Agentic AI",
@@ -27,6 +28,8 @@ export default function Home() {
       <ResumeSection />
       <Divider />
       <ContactSection />
+      <Divider />
+      <AskSection />
       <Footer />
     </main>
   );
@@ -49,6 +52,7 @@ function Nav() {
             { href: "#skills", label: "Skills" },
             { href: "#resume", label: "Resume" },
             { href: "#contact", label: "Contact" },
+            { href: "#ask", label: "Ask" },
           ].map((link) => (
             <a
               key={link.href}

@@ -7,7 +7,7 @@ export const heroContent = {
     { label: "Resume", href: "/resume.pdf", variant: "secondary" as const },
     {
       label: "GitHub",
-      href: "https://github.com/", // TODO: replace with your GitHub URL
+      href: "https://github.com/pringles-can",
       variant: "ghost" as const,
       external: true,
     },
