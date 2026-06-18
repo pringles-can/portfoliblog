@@ -27,7 +27,7 @@ const experience = [
     ],
   },
   {
-    role: "Senior Software Engineer II",
+    role: "Consultant - Senior Software Engineer II",
     company: "Daugherty Business Solutions/CGI",
     period: "2023 – 2024",
     highlights: [
