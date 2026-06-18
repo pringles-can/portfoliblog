@@ -8,34 +8,33 @@ const summary =
 const experience = [
   {
     role: "Senior Software Engineer",
-    company: "Company Name", // TODO: replace with your actual company
-    period: "2022 – Present",
+    company: "LeadingAgile/LiminalArc",
+    period: "2025 – 2026",
     highlights: [
-      "Designed and shipped AI support triage agent reducing average resolution time by 40%",
-      "Led enterprise workflow automation platform adopted by 5 business units",
-      "Established observability standards across 12 distributed .NET services using OpenTelemetry",
-      "Mentored 3 mid-level engineers; introduced vertical slice architecture to a 10-person team",
+      "Architected and delivered a .NET-based service request and work assignment notification platform, enabling real-time tracking and reliable event-driven workflows across distributed systems.",
+      "Utilized Azure DevOps (ADO) for backlog management, pull request governance, and CI/CD pipelines to ensure traceable, high-quality releases.",
+      "Mentored junior engineers through mobbing/ensemble programming, improving code quality, shared ownership, and delivery consistency.",
     ],
   },
   {
-    role: "Software Engineer",
-    company: "Previous Company", // TODO: replace with your actual company
-    period: "2019 – 2022",
+    role: "Senior Software Engineer II",
+    company: "Daugherty Business Solutions/CGI",
+    period: "2024 – 2025",
     highlights: [
-      "Built real-time operations dashboard with SignalR serving 200+ concurrent users",
-      "Migrated legacy monolith to distributed microservices architecture on Azure",
-      "Reduced infrastructure costs by 35% through workload right-sizing and autoscaling",
-      "Led migration from on-premise SQL Server to Cosmos DB with zero downtime",
+      "Established foundational pattern and organization's first cloud venture to transform incoming data into outgoing Benefit Verifications and Prior Authorizations ",
+      "Implemented state machine to better manage prescription and enrollment status changes and transform data into Benefit Verifications and Prior Auths.",
+      "Created Oracle views to manage complex data sets derived from multiple database transactions, leading to up to 80% faster load times on common pages.",
     ],
   },
   {
-    role: "Software Engineer",
-    company: "First Company", // TODO: replace with your actual company
-    period: "2017 – 2019",
+    role: "Senior Software Engineer II",
+    company: "Daugherty Business Solutions/CGI",
+    period: "2023 – 2024",
     highlights: [
-      "Delivered ASP.NET Core REST APIs for fintech integrations serving 50k daily transactions",
-      "Built automated test suite reducing regression cycle from 4 days to 2 hours",
-      "Implemented CI/CD pipeline using Azure DevOps for 6 microservices",
+      "Recognized improper parsing of EDI files from inhouse Java rules engine, resulting in an additional $10,000 in monthly revenue.",
+      "Developed greenfield Coverage Eligibility Request ETL workflow in C#, resulting in 10% increase in automated Benefits Verification.",
+      "Provisioned AWS API Gateway, Kafka, S3 buckets, and downstream data stores using Terraform for a new provider onboarding service.",
+      "Developed C# services to consume SOAP messages, map data to FHIR responses, and publish to public Kafka topic.",
     ],
   },
 ];
