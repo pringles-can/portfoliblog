@@ -67,12 +67,12 @@ export function AskSection() {
               "transition-colors"
             )}
           />
-          <div className="flex justify-end">
+          <div className="flex justify-end w-full">
             <button
               type="submit"
               disabled={!question.trim() || state.status === "loading"}
               className={cn(
-                "inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                "w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 "focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950",
                 "bg-indigo-600 text-white border border-indigo-600",
                 "hover:bg-indigo-500 hover:border-indigo-500",

@@ -5,7 +5,7 @@ function AgentWorkflowDiagram() {
   return (
     <div
       aria-label="Agent workflow architecture diagram"
-      className="relative rounded-2xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur-sm"
+      className="relative w-full rounded-2xl border border-slate-800 bg-slate-900/60 p-6 backdrop-blur-sm"
     >
       <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
         Agentic Workflow Architecture
@@ -14,18 +14,27 @@ function AgentWorkflowDiagram() {
         <DiagramNode label="Event / API Trigger" color="indigo" isFirst />
         <DiagramArrow />
         <DiagramNode label="Agent Orchestrator" color="violet" />
-        <div className="my-1 flex items-start gap-3 pl-8">
-          <div className="flex flex-col items-center gap-1">
-            <DiagramBranch />
-            <DiagramNode label="Tool: Retrieval" color="sky" small />
+        <div className="my-1 flex flex-col sm:flex-row sm:items-start gap-3 pl-4 sm:pl-8">
+          <div className="flex sm:flex-col items-center gap-2 sm:gap-1 w-full sm:w-auto">
+            <DiagramBranch className="hidden sm:block" />
+            <span className="sm:hidden text-slate-600 font-mono text-sm shrink-0" aria-hidden="true">
+              ├─
+            </span>
+            <DiagramNode label="Tool: Retrieval" color="sky" small className="w-full sm:w-auto text-left sm:text-center animate-fade-in" />
           </div>
-          <div className="flex flex-col items-center gap-1">
-            <DiagramBranch />
-            <DiagramNode label="Tool: Database" color="sky" small />
+          <div className="flex sm:flex-col items-center gap-2 sm:gap-1 w-full sm:w-auto">
+            <DiagramBranch className="hidden sm:block" />
+            <span className="sm:hidden text-slate-600 font-mono text-sm shrink-0" aria-hidden="true">
+              ├─
+            </span>
+            <DiagramNode label="Tool: Database" color="sky" small className="w-full sm:w-auto text-left sm:text-center animate-fade-in" />
           </div>
-          <div className="flex flex-col items-center gap-1">
-            <DiagramBranch />
-            <DiagramNode label="Tool: External API" color="sky" small />
+          <div className="flex sm:flex-col items-center gap-2 sm:gap-1 w-full sm:w-auto">
+            <DiagramBranch className="hidden sm:block" />
+            <span className="sm:hidden text-slate-600 font-mono text-sm shrink-0" aria-hidden="true">
+              └─
+            </span>
+            <DiagramNode label="Tool: External API" color="sky" small className="w-full sm:w-auto text-left sm:text-center animate-fade-in" />
           </div>
         </div>
         <DiagramArrow />
@@ -52,6 +61,7 @@ interface DiagramNodeProps {
   color: "indigo" | "violet" | "sky" | "amber" | "emerald";
   small?: boolean;
   isFirst?: boolean;
+  className?: string;
 }
 
 const colorMap: Record<DiagramNodeProps["color"], string> = {
@@ -62,10 +72,10 @@ const colorMap: Record<DiagramNodeProps["color"], string> = {
   emerald: "border-emerald-700 bg-emerald-950/60 text-emerald-300",
 };
 
-function DiagramNode({ label, color, small }: DiagramNodeProps) {
+function DiagramNode({ label, color, small, className }: DiagramNodeProps) {
   return (
     <div
-      className={`rounded-lg border px-3 py-1.5 text-center font-mono ${small ? "text-xs" : "text-sm"} ${colorMap[color]}`}
+      className={`rounded-lg border px-3 py-1.5 font-mono ${small ? "text-xs" : "text-sm"} ${colorMap[color]} ${className || "text-center"}`}
     >
       {label}
     </div>
@@ -82,9 +92,9 @@ function DiagramArrow() {
   );
 }
 
-function DiagramBranch() {
+function DiagramBranch({ className }: { className?: string }) {
   return (
-    <div className="h-4 w-px bg-slate-700" aria-hidden="true" />
+    <div className={`h-4 w-px bg-slate-700 ${className || ""}`} aria-hidden="true" />
   );
 }
 
@@ -106,12 +116,13 @@ export function Hero() {
           <p className="mt-6 text-lg leading-relaxed text-slate-400">
             {heroContent.subheadline}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
             {heroContent.ctas.map((cta) => (
               <ButtonLink
                 key={cta.label}
                 href={cta.href}
                 variant={cta.variant}
+                className="justify-center sm:justify-start"
                 {...("external" in cta && cta.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
@@ -120,11 +131,11 @@ export function Hero() {
               </ButtonLink>
             ))}
           </div>
-          <div className="mt-10 flex items-center gap-6 text-sm text-slate-500">
+          <div className="mt-10 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-6 text-sm text-slate-500">
             <Stat value="8+" label="Years .NET" />
-            <div className="h-4 w-px bg-slate-800" aria-hidden="true" />
+            <div className="hidden sm:block h-4 w-px bg-slate-800" aria-hidden="true" />
             <Stat value="50+" label="Production systems" />
-            <div className="h-4 w-px bg-slate-800" aria-hidden="true" />
+            <div className="hidden sm:block h-4 w-px bg-slate-800" aria-hidden="true" />
             <Stat value="3" label="AI agents shipped" />
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Nav } from "@/features/nav/Nav";
 import { Hero } from "@/features/hero/Hero";
 import { ProjectsSection } from "@/features/projects/ProjectsSection";
 import { WriteupsSection } from "@/features/writeups/WriteupsSection";
@@ -32,39 +33,6 @@ export default function Home() {
       <AskSection />
       <Footer />
     </main>
-  );
-}
-
-function Nav() {
-  return (
-    <nav
-      aria-label="Site navigation"
-      className="fixed top-0 z-50 w-full border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-sm"
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <span className="font-mono text-sm font-semibold text-indigo-400">
-          &lt;Steven Prindle /&gt; { }
-        </span>
-        <div className="flex items-center gap-1">
-          {[
-            { href: "#projects", label: "Projects" },
-            { href: "#writeups", label: "Writing" },
-            { href: "#skills", label: "Skills" },
-            { href: "#resume", label: "Resume" },
-            { href: "#contact", label: "Contact" },
-            { href: "#ask", label: "Ask" },
-          ].map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
-    </nav>
   );
 }
 

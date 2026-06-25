@@ -37,7 +37,7 @@ export function ContactSection() {
       <div className="mx-auto mt-8 max-w-2xl">
         <div className="divide-y divide-slate-800 rounded-xl border border-slate-800 bg-slate-900">
           {contactLinks.map((contact) => (
-            <div key={contact.label} className="flex items-start gap-4 p-6">
+            <div key={contact.label} className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 p-6">
               <div className="min-w-0 flex-1">
                 <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
                   {contact.label}
@@ -51,7 +51,7 @@ export function ContactSection() {
                 {...(contact.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="shrink-0"
+                className="self-start sm:self-auto shrink-0"
               >
                 {contact.label === "Email" ? "Send Email" : "Open"}
               </ButtonLink>
