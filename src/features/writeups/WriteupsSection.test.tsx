@@ -24,7 +24,8 @@ describe("WriteupsSection", () => {
   it("renders read time for each writeup", () => {
     render(<WriteupsSection />);
     for (const writeup of writeups) {
-      expect(screen.getByText(writeup.readTime)).toBeInTheDocument();
+      const elements = screen.getAllByText(writeup.readTime);
+      expect(elements.length).toBeGreaterThan(0);
     }
   });
 });

@@ -94,24 +94,6 @@ export function AskSection() {
                 {state.answer}
               </p>
             </div>
-            {state.sources.length > 0 && (
-              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">
-                  Sources
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {state.sources.map((src) => (
-                    <a
-                      key={src}
-                      href={src}
-                      className="rounded-md border border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-indigo-500 hover:text-indigo-400"
-                    >
-                      {SOURCE_LABELS[src] ?? src}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         )}
 
