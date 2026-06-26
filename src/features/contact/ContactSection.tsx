@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/Button";
 const contactLinks = [
   {
     label: "Email",
-    value: "[EMAIL_ADDRESS]", // TODO: replace with consts
+    value: "prindle.ste@gmail.com", // TODO: replace with consts
     href: "mailto:steprindle@hotmail.com", // TODO: replace with consts
     description: "Best for individual contract or consulting requests.",
   },
