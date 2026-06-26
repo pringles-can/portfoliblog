@@ -5,7 +5,7 @@ export const writeups: Writeup[] = [
     id: "javascript-sucks-ass",
     title: "Javascript Is Hot Trash - A Modest Review",
     summary:
-      "Today we identify lies (i.e. TypeScript), coercion (see ==, !=), and generally discuss the most dominant programming rush job on the planet.",
+      "Today we identify lies (i.e. TypeScript), coercion (see ==, !=), and generally discuss the most dominant programming rush-job on the planet.",
     tags: ["Javascript", "Typescript", "rant"],
     readTime: "10 min read",
     href: "#",

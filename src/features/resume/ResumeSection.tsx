@@ -45,7 +45,7 @@ export function ResumeSection() {
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <SectionHeading title="Resume" />
         <ButtonLink
-          href="/resume.pdf"
+          href="/Steven_Prindle_Resume.pdf"
           variant="secondary"
           download
           className="self-start sm:self-auto"

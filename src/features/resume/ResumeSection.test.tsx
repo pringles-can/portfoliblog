@@ -12,7 +12,7 @@ describe("ResumeSection", () => {
     render(<ResumeSection />);
     const link = screen.getByRole("link", { name: /download resume/i });
     expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute("href", "/resume.pdf");
+    expect(link).toHaveAttribute("href", "/Steven_Prindle_Resume.pdf");
   });
 
   it("renders the career summary", () => {
